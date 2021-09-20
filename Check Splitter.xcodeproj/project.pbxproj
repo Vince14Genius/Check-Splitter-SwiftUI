@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E88F27724B04FC300C17113 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88F27624B04FC300C17113 /* AppDelegate.swift */; };
-		4E88F27924B04FC300C17113 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88F27824B04FC300C17113 /* SceneDelegate.swift */; };
-		4E88F27B24B04FC300C17113 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88F27A24B04FC300C17113 /* ContentView.swift */; };
+		4E43204F26F8C664009F340D /* AddButtonVisual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43204E26F8C664009F340D /* AddButtonVisual.swift */; };
+		4E43205126F8C6A1009F340D /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43205026F8C6A1009F340D /* HelperMethods.swift */; };
+		4E43205326F8C795009F340D /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43205226F8C795009F340D /* EditItemView.swift */; };
+		4E43205526F8CD39009F340D /* AmountNumericField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43205426F8CD39009F340D /* AmountNumericField.swift */; };
 		4E88F27D24B04FC500C17113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E88F27C24B04FC500C17113 /* Assets.xcassets */; };
 		4E88F28024B04FC500C17113 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E88F27F24B04FC500C17113 /* Preview Assets.xcassets */; };
 		4E88F28324B04FC500C17113 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E88F28124B04FC500C17113 /* LaunchScreen.storyboard */; };
@@ -18,7 +19,14 @@
 		4E88F2B224B068D200C17113 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88F2B124B068D200C17113 /* Model.swift */; };
 		4E88F2B524B0690500C17113 /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88F2B424B0690500C17113 /* Amount.swift */; };
 		4E88F2B824B1823200C17113 /* TotalPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88F2B724B1823200C17113 /* TotalPaymentView.swift */; };
-		4E88F2BA24B19C4D00C17113 /* MyButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88F2B924B19C4D00C17113 /* MyButtonStyle.swift */; };
+		4E88F2BA24B19C4D00C17113 /* DefaultButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88F2B924B19C4D00C17113 /* DefaultButtonStyle.swift */; };
+		4EB754D026F69E9900B34608 /* CheckSplitterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB754CF26F69E9900B34608 /* CheckSplitterApp.swift */; };
+		4EB754D226F6A2F500B34608 /* AddPayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB754D126F6A2F500B34608 /* AddPayerView.swift */; };
+		4EB754D426F6A30800B34608 /* EditPayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB754D326F6A30800B34608 /* EditPayerView.swift */; };
+		4EB754D626F6A31A00B34608 /* FinalCalculationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB754D526F6A31A00B34608 /* FinalCalculationView.swift */; };
+		4EB754D826F6A5D100B34608 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB754D726F6A5D100B34608 /* WelcomeView.swift */; };
+		4EB754DB26F6F65400B34608 /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB754DA26F6F65400B34608 /* ProgressIndicator.swift */; };
+		4EB754DE26F7114E00B34608 /* AddPayerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB754DD26F7114E00B34608 /* AddPayerDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E43204E26F8C664009F340D /* AddButtonVisual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonVisual.swift; sourceTree = "<group>"; };
+		4E43205026F8C6A1009F340D /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
+		4E43205226F8C795009F340D /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
+		4E43205426F8CD39009F340D /* AmountNumericField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountNumericField.swift; sourceTree = "<group>"; };
 		4E88F27324B04FC300C17113 /* Check Splitter iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Check Splitter iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E88F27624B04FC300C17113 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4E88F27824B04FC300C17113 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4E88F27A24B04FC300C17113 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4E88F27C24B04FC500C17113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E88F27F24B04FC500C17113 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4E88F28224B04FC500C17113 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +66,14 @@
 		4E88F2B124B068D200C17113 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4E88F2B424B0690500C17113 /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
 		4E88F2B724B1823200C17113 /* TotalPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPaymentView.swift; sourceTree = "<group>"; };
-		4E88F2B924B19C4D00C17113 /* MyButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButtonStyle.swift; sourceTree = "<group>"; };
+		4E88F2B924B19C4D00C17113 /* DefaultButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButtonStyle.swift; sourceTree = "<group>"; };
+		4EB754CF26F69E9900B34608 /* CheckSplitterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckSplitterApp.swift; sourceTree = "<group>"; };
+		4EB754D126F6A2F500B34608 /* AddPayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPayerView.swift; sourceTree = "<group>"; };
+		4EB754D326F6A30800B34608 /* EditPayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPayerView.swift; sourceTree = "<group>"; };
+		4EB754D526F6A31A00B34608 /* FinalCalculationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalCalculationView.swift; sourceTree = "<group>"; };
+		4EB754D726F6A5D100B34608 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		4EB754DA26F6F65400B34608 /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
+		4EB754DD26F7114E00B34608 /* AddPayerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPayerDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +126,16 @@
 			isa = PBXGroup;
 			children = (
 				4E88F2A424B063F100C17113 /* Check Splitter iOS.entitlements */,
-				4E88F27624B04FC300C17113 /* AppDelegate.swift */,
-				4E88F27824B04FC300C17113 /* SceneDelegate.swift */,
-				4E88F27A24B04FC300C17113 /* ContentView.swift */,
+				4EB754CF26F69E9900B34608 /* CheckSplitterApp.swift */,
+				4EB754D726F6A5D100B34608 /* WelcomeView.swift */,
 				4E88F2B724B1823200C17113 /* TotalPaymentView.swift */,
-				4E88F2B924B19C4D00C17113 /* MyButtonStyle.swift */,
+				4EB754DC26F7111F00B34608 /* Payer Step Data Sources */,
+				4EB754D126F6A2F500B34608 /* AddPayerView.swift */,
+				4EB754D326F6A30800B34608 /* EditPayerView.swift */,
+				4E43205226F8C795009F340D /* EditItemView.swift */,
+				4EB754D526F6A31A00B34608 /* FinalCalculationView.swift */,
+				4E88F2B924B19C4D00C17113 /* DefaultButtonStyle.swift */,
+				4EB754D926F6F64400B34608 /* View Elements */,
 				4E88F27C24B04FC500C17113 /* Assets.xcassets */,
 				4E88F28124B04FC500C17113 /* LaunchScreen.storyboard */,
 				4E88F28424B04FC500C17113 /* Info.plist */,
@@ -156,6 +177,25 @@
 				4E88F2B424B0690500C17113 /* Amount.swift */,
 			);
 			path = "Check Splitter Shared";
+			sourceTree = "<group>";
+		};
+		4EB754D926F6F64400B34608 /* View Elements */ = {
+			isa = PBXGroup;
+			children = (
+				4EB754DA26F6F65400B34608 /* ProgressIndicator.swift */,
+				4E43204E26F8C664009F340D /* AddButtonVisual.swift */,
+				4E43205426F8CD39009F340D /* AmountNumericField.swift */,
+			);
+			path = "View Elements";
+			sourceTree = "<group>";
+		};
+		4EB754DC26F7111F00B34608 /* Payer Step Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4EB754DD26F7114E00B34608 /* AddPayerDataSource.swift */,
+				4E43205026F8C6A1009F340D /* HelperMethods.swift */,
+			);
+			path = "Payer Step Data Sources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +261,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					4E88F27224B04FC300C17113 = {
 						CreatedOnToolsVersion = 11.5;
@@ -289,12 +329,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E88F2B524B0690500C17113 /* Amount.swift in Sources */,
-				4E88F27724B04FC300C17113 /* AppDelegate.swift in Sources */,
-				4E88F27924B04FC300C17113 /* SceneDelegate.swift in Sources */,
-				4E88F27B24B04FC300C17113 /* ContentView.swift in Sources */,
+				4EB754D626F6A31A00B34608 /* FinalCalculationView.swift in Sources */,
+				4EB754D026F69E9900B34608 /* CheckSplitterApp.swift in Sources */,
 				4E88F2B824B1823200C17113 /* TotalPaymentView.swift in Sources */,
-				4E88F2BA24B19C4D00C17113 /* MyButtonStyle.swift in Sources */,
+				4E43205126F8C6A1009F340D /* HelperMethods.swift in Sources */,
+				4EB754D826F6A5D100B34608 /* WelcomeView.swift in Sources */,
+				4E43205526F8CD39009F340D /* AmountNumericField.swift in Sources */,
+				4E88F2BA24B19C4D00C17113 /* DefaultButtonStyle.swift in Sources */,
+				4EB754D426F6A30800B34608 /* EditPayerView.swift in Sources */,
 				4E88F2B224B068D200C17113 /* Model.swift in Sources */,
+				4EB754DE26F7114E00B34608 /* AddPayerDataSource.swift in Sources */,
+				4E43204F26F8C664009F340D /* AddButtonVisual.swift in Sources */,
+				4EB754DB26F6F65400B34608 /* ProgressIndicator.swift in Sources */,
+				4EB754D226F6A2F500B34608 /* AddPayerView.swift in Sources */,
+				4E43205326F8C795009F340D /* EditItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,12 +392,66 @@
 		4E88F26D24B04F3800C17113 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
 		4E88F26E24B04F3800C17113 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 			};
 			name = Release;
 		};

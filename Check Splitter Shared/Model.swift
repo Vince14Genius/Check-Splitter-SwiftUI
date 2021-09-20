@@ -5,36 +5,61 @@
 //  Created by Vincent C. on 7/3/20.
 //
 
-/*
-Independent Variables:
-- totalPayment : Amount
-- rawAmounts : [LabeledAmounts] = [payerAmount1, payerAmount2, ..., payerAmountN]
-
-Structure of LabeledAmounts:
-- LabeledAmounts : [ItemName: Amount] = [itemPrice1, itemPrice2, ..., itemPriceN]
-
-Dependent Variables:
-- finalAmounts : [Amount] [finalAmount1, finalAmount2, ..., finalAmountN]
-*/
-
 import Foundation
 
 public typealias PayerName = String
-public typealias ItemName = String
-public typealias LabeledAmounts = [ItemName: Amount]
-public typealias SplitResult = (result: [PayerName: Amount], remainder: Amount)
+public typealias SplitResult = (result: [PayerWithAmount], remainder: Amount)
 
-fileprivate func payerRawSum(_ rawAmount: LabeledAmounts) -> Amount {
-    return rawAmount.reduce(0, { $0 + $1.value })
+public struct Item: Identifiable {
+    public var name: String
+    public var cost: Amount
+    public var divisor: Amount = 1
+    public let id = UUID()
+    
+    public var costAfterDivision: Amount {
+        Amount(cost / divisor)
+    }
 }
 
-fileprivate func reduceRaw(payers: [PayerName: LabeledAmounts]) -> [PayerName: Amount] {
-    return payers.mapValues(payerRawSum)
+public struct PayerWithItems: Identifiable {
+    public var name: PayerName
+    public var items: [Item]
+    public let id = UUID()
 }
 
-fileprivate func payerProportions(payers: [PayerName: Amount]) -> [PayerName: Double] {
-    let total = payers.reduce(0, { $0 + $1.value })
-    return payers.mapValues { $0 / total }
+public struct PayerWithAmount {
+    public var name: PayerName
+    public var amount: Amount
+    public var id: UUID
+}
+
+/**
+ - returns: the sum of payment amounts for the given `Array<PayerWithAmount>`
+ */
+public func sumOfAmounts(payers: [PayerWithAmount]) -> Amount {
+    return payers.reduce(0) { $0 + $1.amount }
+}
+
+/**
+ - returns: the sum of prices for the given `Array<Item>`
+ */
+fileprivate func payerSubtotal(_ rawAmount: [Item]) -> Amount {
+    return rawAmount.reduce(0) { $0 + Amount($1.cost / $1.divisor) }
+}
+
+/**
+ Reduce lists of items into subtotals for each payer
+ */
+fileprivate func payerSubtotals(payers: [PayerWithItems]) -> [PayerWithAmount] {
+    return payers.map { .init(name: $0.name, amount: payerSubtotal($0.items), id: $0.id) }
+}
+
+/**
+ Calculate proportions from each payer's share in the subtotal for the entire group
+ */
+fileprivate func payerProportions(payers: [PayerWithAmount]) -> [(name: PayerName, proportion: Double, id: UUID)] {
+    let total = sumOfAmounts(payers: payers)
+    return payers.map { (name: $0.name, proportion: $0.amount / total, id: $0.id) }
 }
 
 /**
@@ -46,11 +71,20 @@ fileprivate func payerProportions(payers: [PayerName: Amount]) -> [PayerName: Do
  
  - returns: a `Dictionary` consisting of shares of the total payment assigned to each payer, based on the proportions of each payer's subtotal in relation to the sum of subtotals
  */
-public func splitCheck(totalPayment: Amount, payers: [PayerName: LabeledAmounts]) -> SplitResult {
-    let proportions = payerProportions(payers: reduceRaw(payers: payers))
-    let result = proportions.mapValues { Amount($0) * totalPayment }
+public func splitCheck(totalPayment: Amount, payers: [PayerWithItems]) -> SplitResult {
+    let proportions = payerProportions(payers: payerSubtotals(payers: payers))
+    let result = proportions.map {
+        PayerWithAmount(name: $0.name, amount: Amount($0.proportion) * totalPayment, id: $0.id)
+    }
     return (
         result: result,
-        remainder: totalPayment - result.reduce(0, { $0 + $1.value })
+        remainder: totalPayment - sumOfAmounts(payers: result).rounded
     )
+}
+
+/**
+ - returns: the subtotal for the entire list of payers
+ */
+public func sumOfSubtotals(payers: [PayerWithItems]) -> Amount {
+    return sumOfAmounts(payers: payerSubtotals(payers: payers))
 }

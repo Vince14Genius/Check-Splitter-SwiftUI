@@ -11,14 +11,22 @@ public struct Amount: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral, Cu
     public var description: String {
         let hundredthsAfterDecimalPoint = hundredths % 100
         let wholeNumber = (hundredths - hundredthsAfterDecimalPoint) / 100
-        return "\(wholeNumber).\(hundredthsAfterDecimalPoint)"
+        if hundredthsAfterDecimalPoint < 10 {
+            return "\(wholeNumber).0\(hundredthsAfterDecimalPoint)"
+        } else {
+            return "\(wholeNumber).\(hundredthsAfterDecimalPoint)"
+        }
     }
     
-    private var value: Double {
-        return Double(hundredths) / 100
+    private let value: Double
+    
+    private var hundredths: Int {
+        return Int(round(value * 100))
     }
     
-    private let hundredths: Int
+    public var rounded: Amount {
+        return Amount(round(value * 100) / 100)
+    }
     
     public typealias FloatLiteralType = Double
     public typealias IntegerLiteralType = Int
@@ -28,27 +36,27 @@ public struct Amount: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral, Cu
     }
     
     public init(floatLiteral value: Double) {
-        self.hundredths = Int(round(value * 100))
+        self.value = value
     }
     
     public init(integerLiteral value: Int) {
-        self.hundredths = value * 100
+        self.value = Double(value)
     }
     
     private init(hundredths: Int) {
-        self.hundredths = hundredths
+        self.value = Double(hundredths) / 100
     }
     
     public static func + (_ lhs: Amount, _ rhs: Amount) -> Amount {
-        return Amount(hundredths: lhs.hundredths + rhs.hundredths)
+        return Amount(lhs.value + rhs.value)
     }
     
     public static func - (_ lhs: Amount, _ rhs: Amount) -> Amount {
-        return Amount(hundredths: lhs.hundredths - rhs.hundredths)
+        return Amount(lhs.value - rhs.value)
     }
     
     public static func * (_ lhs: Amount, _ rhs: Amount) -> Amount {
-        return Amount(floatLiteral: lhs.value * rhs.value)
+        return Amount(lhs.value * rhs.value)
     }
     
     public static func / (_ lhs: Amount, _ rhs: Amount) -> Double {
