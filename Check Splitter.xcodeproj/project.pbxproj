@@ -491,6 +491,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Check Splitter iOS/Check Splitter iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_ASSET_PATHS = "\"Check Splitter iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = S5LH6VYMA5;
@@ -567,6 +568,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Check Splitter iOS/Check Splitter iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"Check Splitter iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = S5LH6VYMA5;
