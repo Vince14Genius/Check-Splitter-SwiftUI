@@ -51,7 +51,7 @@
 		4E43205026F8C6A1009F340D /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		4E43205226F8C795009F340D /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		4E43205426F8CD39009F340D /* AmountNumericField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountNumericField.swift; sourceTree = "<group>"; };
-		4E88F27324B04FC300C17113 /* Check Splitter iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Check Splitter iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E88F27324B04FC300C17113 /* Check Splitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Check Splitter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E88F27C24B04FC500C17113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E88F27F24B04FC500C17113 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4E88F28224B04FC500C17113 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		4E88F27424B04FC300C17113 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E88F27324B04FC300C17113 /* Check Splitter iOS.app */,
+				4E88F27324B04FC300C17113 /* Check Splitter.app */,
 				4E88F28924B04FC500C17113 /* Check Splitter iOSTests.xctest */,
 				4E88F29424B04FC500C17113 /* Check Splitter iOSUITests.xctest */,
 			);
@@ -201,9 +201,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4E88F27224B04FC300C17113 /* Check Splitter iOS */ = {
+		4E88F27224B04FC300C17113 /* Check Splitter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E88F29B24B04FC500C17113 /* Build configuration list for PBXNativeTarget "Check Splitter iOS" */;
+			buildConfigurationList = 4E88F29B24B04FC500C17113 /* Build configuration list for PBXNativeTarget "Check Splitter" */;
 			buildPhases = (
 				4E88F26F24B04FC300C17113 /* Sources */,
 				4E88F27024B04FC300C17113 /* Frameworks */,
@@ -213,9 +213,9 @@
 			);
 			dependencies = (
 			);
-			name = "Check Splitter iOS";
+			name = "Check Splitter";
 			productName = "Check Splitter iOS";
-			productReference = 4E88F27324B04FC300C17113 /* Check Splitter iOS.app */;
+			productReference = 4E88F27324B04FC300C17113 /* Check Splitter.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4E88F28824B04FC500C17113 /* Check Splitter iOSTests */ = {
@@ -289,7 +289,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E88F27224B04FC300C17113 /* Check Splitter iOS */,
+				4E88F27224B04FC300C17113 /* Check Splitter */,
 				4E88F28824B04FC500C17113 /* Check Splitter iOSTests */,
 				4E88F29324B04FC500C17113 /* Check Splitter iOSUITests */,
 			);
@@ -367,12 +367,12 @@
 /* Begin PBXTargetDependency section */
 		4E88F28B24B04FC500C17113 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4E88F27224B04FC300C17113 /* Check Splitter iOS */;
+			target = 4E88F27224B04FC300C17113 /* Check Splitter */;
 			targetProxy = 4E88F28A24B04FC500C17113 /* PBXContainerItemProxy */;
 		};
 		4E88F29624B04FC500C17113 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4E88F27224B04FC300C17113 /* Check Splitter iOS */;
+			target = 4E88F27224B04FC300C17113 /* Check Splitter */;
 			targetProxy = 4E88F29524B04FC500C17113 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -899,7 +899,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E88F29B24B04FC500C17113 /* Build configuration list for PBXNativeTarget "Check Splitter iOS" */ = {
+		4E88F29B24B04FC500C17113 /* Build configuration list for PBXNativeTarget "Check Splitter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E88F29C24B04FC500C17113 /* Debug */,
