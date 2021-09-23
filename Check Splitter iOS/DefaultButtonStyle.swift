@@ -28,7 +28,7 @@ fileprivate struct MyButtonStyleView: View {
     var body: some View {
     return configuration.label
         .font(Font.system(.headline))
-        .frame(minWidth: 0, maxWidth: .infinity)
+        .frame(minWidth: 0, maxWidth: 640)
         .foregroundColor(Color.white)
         .padding()
         .background(isEnabled ? backgroundColor : Color.gray)

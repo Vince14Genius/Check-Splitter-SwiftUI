@@ -14,6 +14,7 @@ struct CheckSplitterApp: App {
             NavigationView {
                 WelcomeView()
             }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }

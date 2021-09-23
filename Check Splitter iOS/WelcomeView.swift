@@ -61,6 +61,7 @@ struct WelcomeView: View {
                     isSheetPresented: $isSheetPresented
                 )
             }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }
@@ -70,5 +71,6 @@ struct WelcomeView_Previews: PreviewProvider {
         NavigationView {
             WelcomeView()
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
