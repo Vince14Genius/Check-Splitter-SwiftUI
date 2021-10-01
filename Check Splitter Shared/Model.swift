@@ -13,6 +13,7 @@ public typealias SplitResult = (result: [PayerWithAmount], remainder: Amount)
 public struct Item: Identifiable {
     public var name: String
     public var cost: Amount
+    public var multiplier: Amount = 1
     public var divisor: Amount = 1
     public let id = UUID()
     

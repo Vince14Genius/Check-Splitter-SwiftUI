@@ -50,7 +50,7 @@ struct EditItemView: View {
 struct EditItemView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            EditItemView(itemToEdit: .constant(Item(name: "toad feet", cost: 0.19)))
+            EditItemView(itemToEdit: .constant(Item(name: "grass", cost: 0.19)))
         }
     }
 }

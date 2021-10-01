@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Check_Splitter_iOS
+@testable import Check_Splitter
 
 class Check_Splitter_iOSTests: XCTestCase {
 
