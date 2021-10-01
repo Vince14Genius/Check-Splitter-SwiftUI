@@ -13,7 +13,6 @@
 		4E43205526F8CD39009F340D /* AmountNumericField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43205426F8CD39009F340D /* AmountNumericField.swift */; };
 		4E88F27D24B04FC500C17113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E88F27C24B04FC500C17113 /* Assets.xcassets */; };
 		4E88F28024B04FC500C17113 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E88F27F24B04FC500C17113 /* Preview Assets.xcassets */; };
-		4E88F28324B04FC500C17113 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E88F28124B04FC500C17113 /* LaunchScreen.storyboard */; };
 		4E88F28E24B04FC500C17113 /* Check_Splitter_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88F28D24B04FC500C17113 /* Check_Splitter_iOSTests.swift */; };
 		4E88F29924B04FC500C17113 /* Check_Splitter_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88F29824B04FC500C17113 /* Check_Splitter_iOSUITests.swift */; };
 		4E88F2B224B068D200C17113 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88F2B124B068D200C17113 /* Model.swift */; };
@@ -54,7 +53,6 @@
 		4E88F27324B04FC300C17113 /* Check Splitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Check Splitter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E88F27C24B04FC500C17113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E88F27F24B04FC500C17113 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4E88F28224B04FC500C17113 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E88F28424B04FC500C17113 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E88F28924B04FC500C17113 /* Check Splitter iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Check Splitter iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E88F28D24B04FC500C17113 /* Check_Splitter_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Check_Splitter_iOSTests.swift; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 				4E88F2B924B19C4D00C17113 /* DefaultButtonStyle.swift */,
 				4EB754D926F6F64400B34608 /* View Elements */,
 				4E88F27C24B04FC500C17113 /* Assets.xcassets */,
-				4E88F28124B04FC500C17113 /* LaunchScreen.storyboard */,
 				4E88F28424B04FC500C17113 /* Info.plist */,
 				4E88F27E24B04FC500C17113 /* Preview Content */,
 			);
@@ -301,7 +298,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E88F28324B04FC500C17113 /* LaunchScreen.storyboard in Resources */,
 				4E88F28024B04FC500C17113 /* Preview Assets.xcassets in Resources */,
 				4E88F27D24B04FC500C17113 /* Assets.xcassets in Resources */,
 			);
@@ -376,17 +372,6 @@
 			targetProxy = 4E88F29524B04FC500C17113 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		4E88F28124B04FC500C17113 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E88F28224B04FC500C17113 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4E88F26D24B04F3800C17113 /* Debug */ = {
