@@ -21,12 +21,19 @@ public struct Item: Identifiable {
         Amount(self.cost * Amount(integerLiteral: self.multiplier) / Amount(integerLiteral: self.divisor))
     }
     
-    public var hasNonIdentityFraction: Bool {
-        return !(self.multiplier == 1 && self.divisor == 1)
-    }
-    
     public var multiplyByFractionText: String {
-        return self.hasNonIdentityFraction ? "× \(String(describing: self.multiplier))/\(String(describing: self.divisor))" : ""
+        let hasMultiplier = self.multiplier != 1
+        let hasDivisor = self.divisor != 1
+        
+        if hasMultiplier && hasDivisor {
+            return "× \(self.multiplier)/\(self.divisor)"
+        } else if hasMultiplier {
+            return "× \(self.multiplier)"
+        } else if hasDivisor {
+            return "÷ \(self.multiplier)"
+        } else {
+            return ""
+        }
     }
 }
 
