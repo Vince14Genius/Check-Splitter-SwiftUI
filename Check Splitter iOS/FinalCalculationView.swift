@@ -53,7 +53,7 @@ struct FinalCalculationInnerView: View {
                             HStack {
                                 Text(item.name.withDefaultOption("Unnamed item"))
                                 Spacer()
-                                Text(item.divisor == 1 ? "" : "÷ \(String(describing: item.divisor))")
+                                Text(item.multiplyByFractionText)
                                     .foregroundColor(Color(.tertiaryLabel))
                             }
                         }

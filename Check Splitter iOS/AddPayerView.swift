@@ -60,10 +60,10 @@ struct AddPayerView: View {
                                         ForEach(items) { item in
                                             HStack {
                                                 Text(item.name.withDefaultOption("Unnamed item"))
-                                                Text(item.divisor == 1 ? "" : "÷ \(String(describing: item.divisor))")
+                                                Text(item.multiplyByFractionText)
                                                     .foregroundColor(Color(.tertiaryLabel))
                                                 Spacer()
-                                                Text(String(describing: item.costAfterDivision))
+                                                Text(String(describing: item.costAfterMultiplyingByFraction))
                                             }
                                         }
                                     }

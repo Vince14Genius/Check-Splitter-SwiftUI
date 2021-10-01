@@ -15,8 +15,8 @@ struct EditItemView: View {
     @State var costOptional: Amount?
     @State var isCostValid = false
     
-    @State var divisorOptional: Amount?
-    @State var isDivisorValid = false
+    @State var multiplier = 1
+    @State var divisor = 1
     
     var body: some View {
         Form {
@@ -29,18 +29,25 @@ struct EditItemView: View {
                         itemToEdit.cost = costOptional ?? 0
                     }
             }
-            Section(header: Text("Divide By")) {
-                AmountNumericField(rawInput: String(describing: itemToEdit.divisor), amount: $divisorOptional, isInputValid: $isDivisorValid)
-                    .onAppear {
-                        divisorOptional = itemToEdit.divisor
+            Section(header: Text("Multiply by fraction")) {
+                Stepper(value: $itemToEdit.multiplier) {
+                    HStack {
+                        Text("×")
+                            .foregroundColor(Color(.secondaryLabel))
+                        Spacer()
+                        Text(String(itemToEdit.multiplier))
+                            .bold()
                     }
-                    .onChange(of: divisorOptional) { _ in
-                        if let newDivisor = divisorOptional {
-                            itemToEdit.divisor = newDivisor == 0 ? 1 : newDivisor
-                        } else {
-                            itemToEdit.divisor = 1
-                        }
+                }
+                Stepper(value: $itemToEdit.divisor, in: 1 ... .max) {
+                    HStack {
+                        Text("÷")
+                            .foregroundColor(Color(.secondaryLabel))
+                        Spacer()
+                        Text("\(itemToEdit.divisor)")
+                            .bold()
                     }
+                }
             }
         }
         .navigationTitle("Edit Item")

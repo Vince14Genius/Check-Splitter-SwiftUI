@@ -7,17 +7,8 @@
 
 import Foundation
 
-public struct Amount: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral, CustomStringConvertible, Comparable {
-    public var description: String {
-        let hundredthsAfterDecimalPoint = hundredths % 100
-        let wholeNumber = (hundredths - hundredthsAfterDecimalPoint) / 100
-        if hundredthsAfterDecimalPoint < 10 {
-            return "\(wholeNumber).0\(hundredthsAfterDecimalPoint)"
-        } else {
-            return "\(wholeNumber).\(hundredthsAfterDecimalPoint)"
-        }
-    }
-    
+public struct Amount {
+   
     private let value: Double
     
     private var hundredths: Int {
@@ -26,21 +17,6 @@ public struct Amount: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral, Cu
     
     public var rounded: Amount {
         return Amount(round(value * 100) / 100)
-    }
-    
-    public typealias FloatLiteralType = Double
-    public typealias IntegerLiteralType = Int
-    
-    public init(_ value: Double) {
-        self.init(floatLiteral: value)
-    }
-    
-    public init(floatLiteral value: Double) {
-        self.value = value
-    }
-    
-    public init(integerLiteral value: Int) {
-        self.value = Double(value)
     }
     
     private init(hundredths: Int) {
@@ -62,12 +38,46 @@ public struct Amount: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral, Cu
     public static func / (_ lhs: Amount, _ rhs: Amount) -> Double {
         return lhs.value / rhs.value
     }
+}
+
+extension Amount: ExpressibleByFloatLiteral {
+    public typealias FloatLiteralType = Double
     
+    public init(_ value: Double) {
+        self.init(floatLiteral: value)
+    }
+    
+    public init(floatLiteral value: Double) {
+        self.value = value
+    }
+}
+
+extension Amount: ExpressibleByIntegerLiteral {
+    public typealias IntegerLiteralType = Int
+    
+    public init(integerLiteral value: Int) {
+        self.value = Double(value)
+    }
+}
+
+extension Amount: Comparable {
     public static func < (lhs: Amount, rhs: Amount) -> Bool {
         return lhs.hundredths < rhs.hundredths
     }
     
     public static func == (lhs: Amount, rhs: Amount) -> Bool {
         return lhs.hundredths == rhs.hundredths
+    }
+}
+
+extension Amount: CustomStringConvertible {
+    public var description: String {
+        let hundredthsAfterDecimalPoint = hundredths % 100
+        let wholeNumber = (hundredths - hundredthsAfterDecimalPoint) / 100
+        if hundredthsAfterDecimalPoint < 10 {
+            return "\(wholeNumber).0\(hundredthsAfterDecimalPoint)"
+        } else {
+            return "\(wholeNumber).\(hundredthsAfterDecimalPoint)"
+        }
     }
 }

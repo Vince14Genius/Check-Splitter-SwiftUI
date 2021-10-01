@@ -13,12 +13,20 @@ public typealias SplitResult = (result: [PayerWithAmount], remainder: Amount)
 public struct Item: Identifiable {
     public var name: String
     public var cost: Amount
-    public var multiplier: Amount = 1
-    public var divisor: Amount = 1
+    public var multiplier: Int = 1
+    public var divisor: Int = 1
     public let id = UUID()
     
-    public var costAfterDivision: Amount {
-        Amount(cost / divisor)
+    public var costAfterMultiplyingByFraction: Amount {
+        Amount(self.cost * Amount(integerLiteral: self.multiplier) / Amount(integerLiteral: self.divisor))
+    }
+    
+    public var hasNonIdentityFraction: Bool {
+        return !(self.multiplier == 1 && self.divisor == 1)
+    }
+    
+    public var multiplyByFractionText: String {
+        return self.hasNonIdentityFraction ? "× \(String(describing: self.multiplier))/\(String(describing: self.divisor))" : ""
     }
 }
 
@@ -45,7 +53,7 @@ public func sumOfAmounts(payers: [PayerWithAmount]) -> Amount {
  - returns: the sum of prices for the given `Array<Item>`
  */
 fileprivate func payerSubtotal(_ rawAmount: [Item]) -> Amount {
-    return rawAmount.reduce(0) { $0 + Amount($1.cost / $1.divisor) }
+    return rawAmount.reduce(0) { $0 + $1.costAfterMultiplyingByFraction }
 }
 
 /**

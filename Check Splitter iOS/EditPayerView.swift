@@ -33,10 +33,10 @@ struct EditPayerView: View {
                         NavigationLink(destination: EditItemView(itemToEdit: $payerToEdit.items[index(withID: item.id, in: payerToEdit.items)])) {
                             HStack {
                                 Text(item.name.withDefaultOption("Unnamed item"))
-                                Text(item.divisor == 1 ? "" : "÷ \(String(describing: item.divisor))")
+                                Text(item.multiplyByFractionText)
                                     .foregroundColor(Color(.secondaryLabel))
                                 Spacer()
-                                Text(String(describing: item.costAfterDivision))
+                                Text(String(describing: item.costAfterMultiplyingByFraction))
                             }
                         }
                     }
