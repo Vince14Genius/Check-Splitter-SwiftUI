@@ -25,9 +25,7 @@ struct AddPayerView: View {
             Divider()
             
             List {
-                Button {
-                    dataSource.payersWithItems.append(PayerWithItems(name: "", items: []))
-                } label: {
+                NavigationLink(destination: EditNewPayerView(payers: $dataSource.payersWithItems)) {
                     HStack {
                         AddButtonVisual()
                         Text("Add payer")

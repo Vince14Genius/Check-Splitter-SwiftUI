@@ -11,6 +11,7 @@
 		4E43205126F8C6A1009F340D /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43205026F8C6A1009F340D /* HelperMethods.swift */; };
 		4E43205326F8C795009F340D /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43205226F8C795009F340D /* EditItemView.swift */; };
 		4E43205526F8CD39009F340D /* AmountNumericField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43205426F8CD39009F340D /* AmountNumericField.swift */; };
+		4E6D33E5270EB77B007CE07A /* EditNewPayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D33E4270EB77B007CE07A /* EditNewPayerView.swift */; };
 		4E88F27D24B04FC500C17113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E88F27C24B04FC500C17113 /* Assets.xcassets */; };
 		4E88F28024B04FC500C17113 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E88F27F24B04FC500C17113 /* Preview Assets.xcassets */; };
 		4E88F28E24B04FC500C17113 /* Check_Splitter_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88F28D24B04FC500C17113 /* Check_Splitter_iOSTests.swift */; };
@@ -50,6 +51,7 @@
 		4E43205026F8C6A1009F340D /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		4E43205226F8C795009F340D /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		4E43205426F8CD39009F340D /* AmountNumericField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountNumericField.swift; sourceTree = "<group>"; };
+		4E6D33E4270EB77B007CE07A /* EditNewPayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNewPayerView.swift; sourceTree = "<group>"; };
 		4E88F27324B04FC300C17113 /* Check Splitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Check Splitter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E88F27C24B04FC500C17113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E88F27F24B04FC500C17113 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -99,6 +101,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E408CDE270F87B800D52CE6 /* EditItemView */ = {
+			isa = PBXGroup;
+			children = (
+				4E43205226F8C795009F340D /* EditItemView.swift */,
+			);
+			path = EditItemView;
+			sourceTree = "<group>";
+		};
+		4E408CDF270F87CC00D52CE6 /* ListOfPayersView */ = {
+			isa = PBXGroup;
+			children = (
+				4EB754D126F6A2F500B34608 /* AddPayerView.swift */,
+			);
+			path = ListOfPayersView;
+			sourceTree = "<group>";
+		};
+		4E408CE0270F87FE00D52CE6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4EB754D726F6A5D100B34608 /* WelcomeView.swift */,
+				4E88F2B724B1823200C17113 /* TotalPaymentView.swift */,
+				4E408CDF270F87CC00D52CE6 /* ListOfPayersView */,
+				4E6D33E3270EB731007CE07A /* EditPayerView */,
+				4E408CDE270F87B800D52CE6 /* EditItemView */,
+				4EB754D526F6A31A00B34608 /* FinalCalculationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4E6D33E3270EB731007CE07A /* EditPayerView */ = {
+			isa = PBXGroup;
+			children = (
+				4E6D33E4270EB77B007CE07A /* EditNewPayerView.swift */,
+				4EB754D326F6A30800B34608 /* EditPayerView.swift */,
+			);
+			path = EditPayerView;
+			sourceTree = "<group>";
+		};
 		4E88F26824B04F3800C17113 = {
 			isa = PBXGroup;
 			children = (
@@ -125,13 +165,9 @@
 			children = (
 				4E88F2A424B063F100C17113 /* Check Splitter iOS.entitlements */,
 				4EB754CF26F69E9900B34608 /* CheckSplitterApp.swift */,
-				4EB754D726F6A5D100B34608 /* WelcomeView.swift */,
-				4E88F2B724B1823200C17113 /* TotalPaymentView.swift */,
-				4EB754DC26F7111F00B34608 /* Payer Step Data Sources */,
-				4EB754D126F6A2F500B34608 /* AddPayerView.swift */,
-				4EB754D326F6A30800B34608 /* EditPayerView.swift */,
-				4E43205226F8C795009F340D /* EditItemView.swift */,
-				4EB754D526F6A31A00B34608 /* FinalCalculationView.swift */,
+				4E43205026F8C6A1009F340D /* HelperMethods.swift */,
+				4EB754DD26F7114E00B34608 /* AddPayerDataSource.swift */,
+				4E408CE0270F87FE00D52CE6 /* Views */,
 				4E88F2B924B19C4D00C17113 /* DefaultButtonStyle.swift */,
 				4EB754D926F6F64400B34608 /* View Elements */,
 				4E88F27C24B04FC500C17113 /* Assets.xcassets */,
@@ -184,15 +220,6 @@
 				4E43205426F8CD39009F340D /* AmountNumericField.swift */,
 			);
 			path = "View Elements";
-			sourceTree = "<group>";
-		};
-		4EB754DC26F7111F00B34608 /* Payer Step Data Sources */ = {
-			isa = PBXGroup;
-			children = (
-				4EB754DD26F7114E00B34608 /* AddPayerDataSource.swift */,
-				4E43205026F8C6A1009F340D /* HelperMethods.swift */,
-			);
-			path = "Payer Step Data Sources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +364,7 @@
 				4EB754DE26F7114E00B34608 /* AddPayerDataSource.swift in Sources */,
 				4E43204F26F8C664009F340D /* AddButtonVisual.swift in Sources */,
 				4EB754DB26F6F65400B34608 /* ProgressIndicator.swift in Sources */,
+				4E6D33E5270EB77B007CE07A /* EditNewPayerView.swift in Sources */,
 				4EB754D226F6A2F500B34608 /* AddPayerView.swift in Sources */,
 				4E43205326F8C795009F340D /* EditItemView.swift in Sources */,
 			);
