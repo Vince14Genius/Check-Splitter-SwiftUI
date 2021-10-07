@@ -168,7 +168,6 @@
 				4E43205026F8C6A1009F340D /* HelperMethods.swift */,
 				4EB754DD26F7114E00B34608 /* AddPayerDataSource.swift */,
 				4E408CE0270F87FE00D52CE6 /* Views */,
-				4E88F2B924B19C4D00C17113 /* DefaultButtonStyle.swift */,
 				4EB754D926F6F64400B34608 /* View Elements */,
 				4E88F27C24B04FC500C17113 /* Assets.xcassets */,
 				4E88F28424B04FC500C17113 /* Info.plist */,
@@ -215,6 +214,7 @@
 		4EB754D926F6F64400B34608 /* View Elements */ = {
 			isa = PBXGroup;
 			children = (
+				4E88F2B924B19C4D00C17113 /* DefaultButtonStyle.swift */,
 				4EB754DA26F6F65400B34608 /* ProgressIndicator.swift */,
 				4E43204E26F8C664009F340D /* AddButtonVisual.swift */,
 				4E43205426F8CD39009F340D /* AmountNumericField.swift */,
