@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E408CE2270FB53100D52CE6 /* EditNewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E408CE1270FB53100D52CE6 /* EditNewItemView.swift */; };
 		4E408CE4270FB87300D52CE6 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E408CE3270FB87300D52CE6 /* AddButton.swift */; };
+		4E408CE6270FD37300D52CE6 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E408CE5270FD37300D52CE6 /* ClearButton.swift */; };
 		4E43204F26F8C664009F340D /* AddButtonVisual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43204E26F8C664009F340D /* AddButtonVisual.swift */; };
 		4E43205126F8C6A1009F340D /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43205026F8C6A1009F340D /* HelperMethods.swift */; };
 		4E43205326F8C795009F340D /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43205226F8C795009F340D /* EditItemView.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		4E408CE1270FB53100D52CE6 /* EditNewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNewItemView.swift; sourceTree = "<group>"; };
 		4E408CE3270FB87300D52CE6 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		4E408CE5270FD37300D52CE6 /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		4E43204E26F8C664009F340D /* AddButtonVisual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonVisual.swift; sourceTree = "<group>"; };
 		4E43205026F8C6A1009F340D /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		4E43205226F8C795009F340D /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				4E408CE3270FB87300D52CE6 /* AddButton.swift */,
 				4E43204E26F8C664009F340D /* AddButtonVisual.swift */,
 				4E43205426F8CD39009F340D /* AmountNumericField.swift */,
+				4E408CE5270FD37300D52CE6 /* ClearButton.swift */,
 			);
 			path = "View Elements";
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				4E88F2B224B068D200C17113 /* Model.swift in Sources */,
 				4EB754DE26F7114E00B34608 /* AddPayerDataSource.swift in Sources */,
 				4E43204F26F8C664009F340D /* AddButtonVisual.swift in Sources */,
+				4E408CE6270FD37300D52CE6 /* ClearButton.swift in Sources */,
 				4EB754DB26F6F65400B34608 /* ProgressIndicator.swift in Sources */,
 				4E6D33E5270EB77B007CE07A /* EditNewPayerView.swift in Sources */,
 				4EB754D226F6A2F500B34608 /* AddPayerView.swift in Sources */,

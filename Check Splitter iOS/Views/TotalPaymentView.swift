@@ -20,7 +20,7 @@ struct TotalPaymentView: View {
             ScrollView {
                 VStack(alignment: .leading) {
                     Text("Start by entering your total payment:")
-                        .font(Font.system(.body))
+                        .font(.body)
                     AmountNumericField(amount: $totalPayment, isInputValid: $isInputValid)
                     Divider()
                     Text(totalPayment == nil ? "" : String(describing: totalPayment!))

@@ -29,9 +29,10 @@ struct AmountNumericField: View {
     
     var body: some View {
         TextField("0.00", text: $rawInput)
+            .clearButton(text: $rawInput)
             .keyboardType(.decimalPad)
             .multilineTextAlignment(.trailing)
-            .font(Font.system(.title))
+            .font(.title)
             .onAppear(perform: updateStates)
             .onChange(of: rawInput) { _ in
                 updateStates()

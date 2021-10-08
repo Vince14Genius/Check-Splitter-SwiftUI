@@ -22,6 +22,7 @@ struct EditItemView: View {
         Form {
             Section(header: Text("Name")) {
                 TextField("Item Name", text: $itemToEdit.name)
+                    .clearButton(text: $itemToEdit.name)
             }
             Section(header: Text("Price")) {
                 AmountNumericField(rawInput: String(describing: itemToEdit.cost), amount: $costOptional, isInputValid: $isCostValid)

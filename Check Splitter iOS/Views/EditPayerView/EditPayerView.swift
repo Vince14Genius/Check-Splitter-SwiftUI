@@ -16,6 +16,7 @@ struct EditPayerView: View {
         Form {
             Section(header: Text("Name")) {
                 TextField("Payer Name", text: $payerToEdit.name)
+                    .clearButton(text: $payerToEdit.name)
             }
             Section(header: Text("Items to Pay")) {
                 List {
