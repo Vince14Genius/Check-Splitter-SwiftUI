@@ -48,11 +48,12 @@ struct WelcomeView: View {
                     Spacer()
                 }
             }
+            .padding([.leading, .trailing])
             Button("Start") {
                 isSheetPresented = true
             }
+            .padding()
         }
-        .padding()
         .buttonStyle(MyButtonStyle())
         .navigationTitle("Split your check!")
         .sheet(isPresented: $isSheetPresented) {

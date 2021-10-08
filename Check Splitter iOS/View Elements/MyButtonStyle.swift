@@ -31,7 +31,7 @@ fileprivate struct MyButtonStyleView: View {
         .frame(minWidth: 0, maxWidth: 640)
         .foregroundColor(Color.white)
         .padding()
-        .background(isEnabled ? backgroundColor : Color.gray)
+        .background(isEnabled ? backgroundColor : Color.secondary)
         .opacity(configuration.isPressed ? 0.67 : 1)
         .cornerRadius(16)
     }

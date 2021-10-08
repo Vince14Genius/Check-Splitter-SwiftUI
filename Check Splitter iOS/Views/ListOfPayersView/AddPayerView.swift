@@ -20,9 +20,6 @@ struct AddPayerView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            ProgressIndicator(stepsCount: 3, currentStep: 2)
-            Divider()
-            
             List {
                 AddButton(text: "Add payer", sheetTitle: "New Payer", sheetView: EditNewPayerView(payers: $dataSource.payersWithItems))
                 
@@ -87,7 +84,10 @@ struct AddPayerView: View {
         }
         .navigationTitle("Add Payers")
         .toolbar {
-            EditButton()
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                EditButton()
+                ProgressIndicator(currentStep: 2, stepsCount: 3)
+            }
         }
     }
     

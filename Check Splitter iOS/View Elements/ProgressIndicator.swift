@@ -7,40 +7,39 @@
 
 import SwiftUI
 
-struct StepUnit: View {
-    let number: Int
-    let isCurrentStep: Bool
-    
-    var body: some View {
-        Text("\(number)")
-            .frame(width: 36, height: 36)
-            .background(isCurrentStep ? Color.accentColor : Color(.secondarySystemBackground))
-            .foregroundColor(Color(isCurrentStep ? .systemBackground : .secondaryLabel))
-            .cornerRadius(18)
-    }
-}
-
 struct ProgressIndicator: View {
-    let stepsCount: Int
     let currentStep: Int
+    let stepsCount: Int
     
     var body: some View {
-        HStack {
-            Spacer()
-            ForEach(1..<stepsCount) { i in
-                StepUnit(number: i, isCurrentStep: currentStep == i)
-                Image(systemName: "chevron.forward")
+        GeometryReader { geometry in
+            let strokeWidth = geometry.size.width * 0.2
+            ZStack {
+                Circle()
+                    .stroke(
+                        Color(.secondarySystemFill),
+                        style: StrokeStyle(lineWidth: strokeWidth, lineCap: .round)
+                    )
+                Circle()
+                    .trim(from: 0, to: Double(currentStep) / Double(stepsCount))
+                    .stroke(
+                        Color.accentColor,
+                        style: StrokeStyle(lineWidth: strokeWidth, lineCap: .round)
+                    )
+                    .rotationEffect(Angle(degrees: -90))
             }
-            StepUnit(number: stepsCount, isCurrentStep: currentStep == stepsCount)
-            Spacer()
         }
-            .font(.system(size: 18))
-            .padding(.bottom)
     }
 }
 
 struct ProgressIndicator_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressIndicator(stepsCount: 3, currentStep: 1)
+        HStack(spacing: 16) {
+            ProgressIndicator(currentStep: 0, stepsCount: 3)
+            ProgressIndicator(currentStep: 1, stepsCount: 3)
+            ProgressIndicator(currentStep: 2, stepsCount: 3)
+            ProgressIndicator(currentStep: 3, stepsCount: 3)
+        }
+        .padding()
     }
 }

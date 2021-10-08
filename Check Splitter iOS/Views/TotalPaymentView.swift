@@ -15,8 +15,6 @@ struct TotalPaymentView: View {
     
     var body: some View {
         VStack {
-            ProgressIndicator(stepsCount: 3, currentStep: 1)
-            Divider()
             ScrollView {
                 VStack(alignment: .leading) {
                     Text("Start by entering your total payment:")
@@ -25,13 +23,14 @@ struct TotalPaymentView: View {
                     Divider()
                     Text(totalPayment == nil ? "" : String(describing: totalPayment!))
                 }
-                    .padding()
+                .padding()
             }
             .onTapGesture {
                 hideKeyboard()
             }
             
             Spacer()
+            
             NavigationLink("Continue", destination: AddPayerView(
                             isSheetPresented: $isSheetPresented,
                             totalPayment: totalPayment ?? 8964.0)
@@ -42,10 +41,13 @@ struct TotalPaymentView: View {
         .buttonStyle(MyButtonStyle())
         .navigationTitle("Total payment")
         .toolbar {
-            ToolbarItemGroup(placement: .navigationBarLeading) {
+            ToolbarItem(placement: .navigationBarLeading) {
                 Button("Cancel") {
                     isSheetPresented = false
                 }
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                ProgressIndicator(currentStep: 1, stepsCount: 3)
             }
         }
     }

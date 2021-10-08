@@ -16,8 +16,11 @@ struct FinalCalculationView: View {
     var body: some View {
         FinalCalculationInnerView(totalPayment: totalPayment,  payersWithItems: payersWithItems)
             .toolbar {
-                Button("Done") {
-                    isSheetPresented = false
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button("Done") {
+                        isSheetPresented = false
+                    }
+                    ProgressIndicator(currentStep: 3, stepsCount: 3)
                 }
             }
     }
@@ -33,7 +36,6 @@ struct FinalCalculationInnerView: View {
     
     var body: some View {
         VStack {
-            ProgressIndicator(stepsCount: 3, currentStep: 3)
             ScrollView {
                 let resultList = result.result
                 
