@@ -16,14 +16,21 @@ struct TotalPaymentView: View {
     var body: some View {
         VStack {
             ProgressIndicator(stepsCount: 3, currentStep: 1)
-            VStack(alignment: .leading) {
-                Text("Start by entering your total payment:")
-                    .font(Font.system(.body))
-                AmountNumericField(amount: $totalPayment, isInputValid: $isInputValid)
-                Divider()
-                Text(totalPayment == nil ? "" : String(describing: totalPayment!))
+            Divider()
+            ScrollView {
+                VStack(alignment: .leading) {
+                    Text("Start by entering your total payment:")
+                        .font(Font.system(.body))
+                    AmountNumericField(amount: $totalPayment, isInputValid: $isInputValid)
+                    Divider()
+                    Text(totalPayment == nil ? "" : String(describing: totalPayment!))
+                }
+                    .padding()
             }
-                .padding()
+            .onTapGesture {
+                hideKeyboard()
+            }
+            
             Spacer()
             NavigationLink("Continue", destination: AddPayerView(
                             isSheetPresented: $isSheetPresented,

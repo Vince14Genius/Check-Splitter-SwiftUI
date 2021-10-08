@@ -35,7 +35,7 @@ struct ProgressIndicator: View {
             Spacer()
         }
             .font(.system(size: 18))
-            .padding(.top)
+            .padding(.bottom)
     }
 }
 

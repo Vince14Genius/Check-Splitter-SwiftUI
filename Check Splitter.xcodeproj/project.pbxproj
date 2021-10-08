@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E408CE2270FB53100D52CE6 /* EditNewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E408CE1270FB53100D52CE6 /* EditNewItemView.swift */; };
+		4E408CE4270FB87300D52CE6 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E408CE3270FB87300D52CE6 /* AddButton.swift */; };
 		4E43204F26F8C664009F340D /* AddButtonVisual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43204E26F8C664009F340D /* AddButtonVisual.swift */; };
 		4E43205126F8C6A1009F340D /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43205026F8C6A1009F340D /* HelperMethods.swift */; };
 		4E43205326F8C795009F340D /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43205226F8C795009F340D /* EditItemView.swift */; };
@@ -19,7 +21,7 @@
 		4E88F2B224B068D200C17113 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88F2B124B068D200C17113 /* Model.swift */; };
 		4E88F2B524B0690500C17113 /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88F2B424B0690500C17113 /* Amount.swift */; };
 		4E88F2B824B1823200C17113 /* TotalPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88F2B724B1823200C17113 /* TotalPaymentView.swift */; };
-		4E88F2BA24B19C4D00C17113 /* DefaultButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88F2B924B19C4D00C17113 /* DefaultButtonStyle.swift */; };
+		4E88F2BA24B19C4D00C17113 /* MyButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E88F2B924B19C4D00C17113 /* MyButtonStyle.swift */; };
 		4EB754D026F69E9900B34608 /* CheckSplitterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB754CF26F69E9900B34608 /* CheckSplitterApp.swift */; };
 		4EB754D226F6A2F500B34608 /* AddPayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB754D126F6A2F500B34608 /* AddPayerView.swift */; };
 		4EB754D426F6A30800B34608 /* EditPayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB754D326F6A30800B34608 /* EditPayerView.swift */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E408CE1270FB53100D52CE6 /* EditNewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNewItemView.swift; sourceTree = "<group>"; };
+		4E408CE3270FB87300D52CE6 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		4E43204E26F8C664009F340D /* AddButtonVisual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonVisual.swift; sourceTree = "<group>"; };
 		4E43205026F8C6A1009F340D /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		4E43205226F8C795009F340D /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
@@ -66,7 +70,7 @@
 		4E88F2B124B068D200C17113 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4E88F2B424B0690500C17113 /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
 		4E88F2B724B1823200C17113 /* TotalPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPaymentView.swift; sourceTree = "<group>"; };
-		4E88F2B924B19C4D00C17113 /* DefaultButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButtonStyle.swift; sourceTree = "<group>"; };
+		4E88F2B924B19C4D00C17113 /* MyButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButtonStyle.swift; sourceTree = "<group>"; };
 		4EB754CF26F69E9900B34608 /* CheckSplitterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckSplitterApp.swift; sourceTree = "<group>"; };
 		4EB754D126F6A2F500B34608 /* AddPayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPayerView.swift; sourceTree = "<group>"; };
 		4EB754D326F6A30800B34608 /* EditPayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPayerView.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 		4E408CDE270F87B800D52CE6 /* EditItemView */ = {
 			isa = PBXGroup;
 			children = (
+				4E408CE1270FB53100D52CE6 /* EditNewItemView.swift */,
 				4E43205226F8C795009F340D /* EditItemView.swift */,
 			);
 			path = EditItemView;
@@ -214,8 +219,9 @@
 		4EB754D926F6F64400B34608 /* View Elements */ = {
 			isa = PBXGroup;
 			children = (
-				4E88F2B924B19C4D00C17113 /* DefaultButtonStyle.swift */,
+				4E88F2B924B19C4D00C17113 /* MyButtonStyle.swift */,
 				4EB754DA26F6F65400B34608 /* ProgressIndicator.swift */,
+				4E408CE3270FB87300D52CE6 /* AddButton.swift */,
 				4E43204E26F8C664009F340D /* AddButtonVisual.swift */,
 				4E43205426F8CD39009F340D /* AmountNumericField.swift */,
 			);
@@ -354,11 +360,13 @@
 				4E88F2B524B0690500C17113 /* Amount.swift in Sources */,
 				4EB754D626F6A31A00B34608 /* FinalCalculationView.swift in Sources */,
 				4EB754D026F69E9900B34608 /* CheckSplitterApp.swift in Sources */,
+				4E408CE4270FB87300D52CE6 /* AddButton.swift in Sources */,
 				4E88F2B824B1823200C17113 /* TotalPaymentView.swift in Sources */,
 				4E43205126F8C6A1009F340D /* HelperMethods.swift in Sources */,
 				4EB754D826F6A5D100B34608 /* WelcomeView.swift in Sources */,
 				4E43205526F8CD39009F340D /* AmountNumericField.swift in Sources */,
-				4E88F2BA24B19C4D00C17113 /* DefaultButtonStyle.swift in Sources */,
+				4E88F2BA24B19C4D00C17113 /* MyButtonStyle.swift in Sources */,
+				4E408CE2270FB53100D52CE6 /* EditNewItemView.swift in Sources */,
 				4EB754D426F6A30800B34608 /* EditPayerView.swift in Sources */,
 				4E88F2B224B068D200C17113 /* Model.swift in Sources */,
 				4EB754DE26F7114E00B34608 /* AddPayerDataSource.swift in Sources */,

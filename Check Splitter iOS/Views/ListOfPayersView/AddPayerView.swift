@@ -21,19 +21,11 @@ struct AddPayerView: View {
     var body: some View {
         VStack(spacing: 0) {
             ProgressIndicator(stepsCount: 3, currentStep: 2)
-                .padding([.top, .bottom])
             Divider()
             
             List {
-                NavigationLink(destination: EditNewPayerView(payers: $dataSource.payersWithItems)) {
-                    HStack {
-                        AddButtonVisual()
-                        Text("Add payer")
-                            .padding(.leading, 10)
-                        Spacer()
-                    }
-                    .padding([.top, .bottom], 4)
-                }
+                AddButton(text: "Add payer", sheetTitle: "New Payer", sheetView: EditNewPayerView(payers: $dataSource.payersWithItems))
+                
                 ForEach(dataSource.payersWithItems) { payerWithItems in
                     let items = payerWithItems.items
                     

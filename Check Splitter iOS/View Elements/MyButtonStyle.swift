@@ -1,5 +1,5 @@
 //
-//  DefaultButtonStyle.swift
+//  MyButtonStyle.swift
 //  Check Splitter iOS
 //
 //  Created by Vincent C. on 7/4/20.

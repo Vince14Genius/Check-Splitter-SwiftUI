@@ -17,6 +17,7 @@ struct EditNewPayerView: View {
         } else {
             Text("Creating new payer...")
                 .onAppear {
+                    guard newPayerId == nil else { return }
                     let newPayer = PayerWithItems(name: "", items: [])
                     newPayerId = newPayer.id
                     self.payers.append(newPayer)

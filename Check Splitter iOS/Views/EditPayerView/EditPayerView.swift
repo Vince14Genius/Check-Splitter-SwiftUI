@@ -19,16 +19,8 @@ struct EditPayerView: View {
             }
             Section(header: Text("Items to Pay")) {
                 List {
-                    Button {
-                        payerToEdit.items.append(Item(name: "", cost: 9.99))
-                    } label: {
-                        HStack {
-                            AddButtonVisual()
-                            Text("Add item")
-                                .padding(.leading, 10)
-                            Spacer()
-                        }
-                    }
+                    AddButton(text: "Add item", sheetTitle: "New Item", sheetView: EditNewItemView(items: $payerToEdit.items))
+                    
                     ForEach(payerToEdit.items) { item in
                         NavigationLink(destination: EditItemView(itemToEdit: $payerToEdit.items[index(withID: item.id, in: payerToEdit.items)])) {
                             HStack {
@@ -44,13 +36,6 @@ struct EditPayerView: View {
                     .onMove(perform: move)
                 }
             }
-//            Section {
-//                Button("Remove this payer") {
-//                    // - TODO: Remove this payer
-//                    presentationMode.wrappedValue.dismiss()
-//                }
-//                    .accentColor(.red)
-//            }
         }
         .navigationTitle("Edit Payer")
         .toolbar {
