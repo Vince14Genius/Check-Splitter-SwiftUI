@@ -30,7 +30,7 @@ public struct Item: Identifiable {
         } else if hasMultiplier {
             return "× \(self.multiplier)"
         } else if hasDivisor {
-            return "÷ \(self.multiplier)"
+            return "÷ \(self.divisor)"
         } else {
             return ""
         }
